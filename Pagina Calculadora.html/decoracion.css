@@ -1,0 +1,218 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e6f0ff, #ffffff);
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    /* Navegación */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      z-index: 1000;
+      padding: 15px 0;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+    }
+
+    .logo-nav {
+      display: flex;
+      align-items: center;
+      font-size: 1.9rem;
+      font-weight: bold;
+      color: #e67e22;
+      text-decoration: none;
+    }
+
+    .logo-nav img {
+      height: 38px;
+      margin-right: 12px;
+      border-radius: 8px;
+    }
+
+    .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #e67e22;
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      min-height: 720px;
+      background: linear-gradient(rgba(52, 152, 219, 0.18), rgba(52, 152, 219, 0.06)),
+                  url('https://images.unsplash.com/photo-1509228627929-8243eb4676d2?auto=format&fit=crop&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .logo-hero {
+      margin-bottom: 30px;
+    }
+
+    .logo-hero img {
+      max-height: 180px;
+      width: auto;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4));
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      text-shadow: 3px 3px 12px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 50px;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e67e22;
+      color: white;
+      padding: 16px 50px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 6px 18px rgba(230,126,34,0.45);
+    }
+
+    .btn:hover {
+      background: #d35400;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(230,126,34,0.55);
+    }
+
+    /* Secciones */
+    section {
+      padding: 110px 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 50px;
+      color: #2980b9;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 90px;
+      height: 5px;
+      background: #e67e22;
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+    }
+
+    .card h3 {
+      color: #e67e22;
+      margin-bottom: 20px;
+      font-size: 1.7rem;
+    }
+
+    /* Nueva sección: Descarga la App */
+    #descarga {
+      background: #f8f9fa;
+      text-align: center;
+    }
+
+    .download-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .store-btn {
+      display: block;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .store-btn:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .store-btn img {
+      height: 65px; /* Tamaño estándar para badges */
+      width: auto;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3rem; }
+      .hero p { font-size: 1.3rem; }
+      .logo-hero img { max-height: 140px; }
+      .download-buttons { flex-direction: column; align-items: center; }
+      .store-btn img { height: 55px; }
+    }
