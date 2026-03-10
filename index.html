@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="decoracion.css">
+  <title>Matematica Fácil - Aprende Matemáticas</title>
+
+</head>
+<body>
+
+  <!-- Navegación con logo -->
+  <nav>
+    <div class="nav-container">
+      <a href="#inicio" class="logo-nav">
+        <img src="logo MATH.jpeg" alt="Logo Álgebra Fácil">
+        Matematica Fácil
+      </a>
+      <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#temas">Caracteristicas</a>
+        <a href="#descarga">Calculadora</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero con logo grande -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <div class="logo-hero">
+        <img src="logo MATH.jpeg" alt="Logo Matemáticas">
+      </div>
+      <h1>Aprende de Forma Sencilla y Divertida</h1>
+      <p>Domina sumas, restas, multiplicación y mucho más de manera facil y divertidas con explicaciones claras y ejemplos prácticos.</p>
+      <a href="#temas" class="btn">¡Empezar Ahora!</a>
+    </div>
+  </section>
+
+  <!-- Temas -->
+  <section id="temas">
+    <h2>Caracteristicas Principales</h2>
+    <div class="features">
+      <div class="card">
+        <h3> Suma </h3>
+        <p>Aprende a resolver sumas de manera facil</p>
+      </div>
+      <div class="card">
+        <h3>Restas</h3>
+        <p>Métodos de para restar de forma súper clara.</p>
+      </div>
+      <div class="card">
+        <h3> Multiplicación</h3>
+        <p>Entiende cómo multiplicar mas fácilmente.</p>
+      </div>
+      <div class="card">
+        <h3>División</h3>
+        <p>División de diferentes caracteres y sus formas sencillas de mostrar resultados</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nueva sección: Descarga la App -->
+  <section id="descarga">
+    <h2>Calculadora</h2>
+    <p style="text-align: center; font-size: 1.4rem; max-width: 800px; margin: 0 auto 40px;">
+      Lleva Matematica Fácil a donde vayas: La Calculadora integrada mas completa que existe y mucho más. ¡Disponible ahora!
+    </p>
+ 
+ 
+    <style>
+        header {
+            background-color: #0f2027;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #eff7fa;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        .calculadora {
+            background-color: #819fe0;
+            color: black;
+            height: 500px;
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            text-align: right;
+        }
+
+        button {
+            width: 20%;
+            height: 75px;
+            margin: 3px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #2a5298;
+            color: rgb(254, 254, 254);
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #acb4c1;
+        }
+
+        footer {
+            background-color: #0f2027;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <div class="calculadora">
+        <input type="text" id="pantalla" disabled>
+
+        <button onclick="agregar('7')">7</button>
+        <button onclick="agregar('8')">8</button>
+        <button onclick="agregar('9')">9</button>
+        <button onclick="agregar('/')">÷</button>
+
+        <button onclick="agregar('4')">4</button>
+        <button onclick="agregar('5')">5</button>
+        <button onclick="agregar('6')">6</button>
+        <button onclick="agregar('*')">×</button>
+
+        <button onclick="agregar('1')">1</button>
+        <button onclick="agregar('2')">2</button>
+        <button onclick="agregar('3')">3</button>
+        <button onclick="agregar('-')">−</button>
+
+        <button onclick="agregar('.')">.</button>
+        <button onclick="agregar('0')">0</button>
+        <button onclick="agregar('+')">+</button>
+        <button onclick="calcular()">=</button>
+
+        <br>
+        <button onclick="del()">Del</button>
+        <button onclick="limpiar()">C</button>
+    </div>
+</section>
+
+
+<script>
+    function agregar(valor) {
+        document.getElementById("pantalla").value += valor;
+    }
+
+    function limpiar() {
+        document.getElementById("pantalla").value = "";
+    }
+
+    function del() {
+        text = document.getElementById("pantalla").value 
+        document.getElementById("pantalla").value = text.slice(1,)
+    }
+
+    function calcular() {
+        try {
+            document.getElementById("pantalla").value = eval(document.getElementById("pantalla").value);
+        } catch {
+            document.getElementById("pantalla").value = 'Error de calculo';
+        }
+    }
+</script>
+
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto">
+    <h2>¿Tienes dudas?</h2>
+    <p>Escríbenos y resolvemos juntos cualquiera de tus inquietudes.</p>
+    <p style="margin: 30px 0;">✉️ 5toc_informatica@gmail.com</p>
+    <p>© 2026 Matematica Fácil - Hecho con cariño por los estudiantes de 5toc de informatica, Politecnico El Ave María-Moca, Provincia Spaillat/Republica Dominicana</p>
+  </footer>
+
+</body>
+</html>
